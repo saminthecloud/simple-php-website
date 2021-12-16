@@ -8,9 +8,13 @@ pipeline {
         }
         
         stage ('Build docker image') {
-             app = docker.build("phpwebsite")
+            steps {
+                script {
+                    app = docker.build("phpwebsite")
+                }
+            }
+            
         }
-        
         
     }
 }
