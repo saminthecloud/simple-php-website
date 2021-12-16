@@ -19,7 +19,7 @@ pipeline {
         stage ('Run') {
             steps {
                 sh """
-                docker run -rm phpwebsite
+                docker run -itd -P phpwebsite
                 """
             }
         }
