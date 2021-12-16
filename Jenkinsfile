@@ -16,5 +16,13 @@ pipeline {
             
         }
         
+        stage ('Run') {
+            steps {
+                sh """
+                docker run -rm phpwebsite
+                """
+            }
+        }
+        
     }
 }
